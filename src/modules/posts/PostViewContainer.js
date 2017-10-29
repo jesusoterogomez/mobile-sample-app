@@ -1,18 +1,18 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import PostView from './PostView';
 import {NavigationActions} from 'react-navigation';
-import * as postStateActions from '../posts/PostState';
+import PostView from './PostView';
+import * as PostStateActions from '../posts/PostState';
 
 export default connect(
   state => ({
-    counter: state.getIn(['counter', 'value']),
-    loading: state.getIn(['counter', 'loading'])
+      posts: state.getIn(['posts', 'posts']),
+      loading: state.getIn(['posts', 'loading'])
   }),
   dispatch => {
-    return {
-      navigate: bindActionCreators(NavigationActions.navigate, dispatch),
-      postStateActions: bindActionCreators(postStateActions, dispatch)
-    };
+      return {
+          navigate: bindActionCreators(NavigationActions.navigate, dispatch),
+          postStateActions: bindActionCreators(PostStateActions, dispatch)
+      };
   }
 )(PostView);

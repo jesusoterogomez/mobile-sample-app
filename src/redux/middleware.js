@@ -5,7 +5,7 @@ import loggerMiddleware from './middleware/loggerMiddleware';
 
 // define store middlewares as an array
 export default [
-  promiseMiddleware,
-  thunkMiddleware,
-  loggerMiddleware
+    promiseMiddleware,
+    thunkMiddleware,
+    loggerMiddleware
 ];

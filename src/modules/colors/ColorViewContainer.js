@@ -6,8 +6,8 @@ import ColorView from './ColorView';
 export default connect(
    null,
    dispatch => {
-     return {
-       navigate: bindActionCreators(NavigationActions.navigate, dispatch)
-     };
+       return {
+           navigate: bindActionCreators(NavigationActions.navigate, dispatch)
+       };
    }
 )(ColorView);

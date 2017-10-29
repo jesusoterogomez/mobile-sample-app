@@ -4,8 +4,8 @@ import middleware from './middleware';
 import reducer from './reducer';
 
 const enhancers = [
-  applyMiddleware(...middleware),
-  reduxLoop.install()
+    applyMiddleware(...middleware),
+    reduxLoop.install()
 ];
 
 /* Enable redux dev tools only in development.

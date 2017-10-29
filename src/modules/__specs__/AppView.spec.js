@@ -6,10 +6,10 @@ import {ActivityIndicator} from 'react-native';
 import AppView from '../AppView';
 
 describe('<AppView />', () => {
-  describe('isReady', () => {
-    it('should render a <ActivityIndicator /> if not ready', () => {
-      const fn = () => {};
-      const wrapper = shallow(
+    describe('isReady', () => {
+        it('should render a <ActivityIndicator /> if not ready', () => {
+            const fn = () => {};
+            const wrapper = shallow(
         <AppView
           isReady={false}
           isLoggedIn={false}
@@ -17,12 +17,12 @@ describe('<AppView />', () => {
         />
       );
 
-      expect(wrapper.find(ActivityIndicator).length).toBe(1);
-    });
+            expect(wrapper.find(ActivityIndicator).length).toBe(1);
+        });
 
-    it('should not render a <ActivityIndicator /> if ready', () => {
-      const fn = () => {};
-      const wrapper = shallow(
+        it('should not render a <ActivityIndicator /> if ready', () => {
+            const fn = () => {};
+            const wrapper = shallow(
         <AppView
           isReady={true}
           isLoggedIn={false}
@@ -30,7 +30,7 @@ describe('<AppView />', () => {
         />
       );
 
-      expect(wrapper.find(ActivityIndicator).length).toBe(0);
+            expect(wrapper.find(ActivityIndicator).length).toBe(0);
+        });
     });
-  });
 });
